@@ -7,7 +7,9 @@
 	border-width: 2px;
 	width: 90px;
 	padding: 5px;
+	font-family: fantasy;
 	font-size: 15px;
+	text-align: center
 }
 .track{
 	border-style: dashed;
@@ -16,6 +18,9 @@
 	padding: 5px;
 	font-family: fantasy;
 	font-size: 15px;
+}
+.frog{
+	
 }
 span{
 	color: orangered	

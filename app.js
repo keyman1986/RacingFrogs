@@ -9,6 +9,18 @@ function MainController() {
     vm.bob = new Guy("Bob",150);
     vm.bank = 200;
     
+    vm.frogs = [
+        {name: "Tom", posX: 0},
+        {name: "Dick", posX: 0},
+        {name: "Harry", posX:0}
+        ];
+    
+    vm.race = function(){
+        vm.frogs.forEach(function(){
+            vm.frogs.posX += 10;
+        });
+    };
+    
     function Guy(name, startingCash) {
         this.name = name;
         this.cash = startingCash;
