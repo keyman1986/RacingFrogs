@@ -1,0 +1,26 @@
+.body{
+	width: 700px;
+	margin: auto
+}
+.racer{
+	border-style: solid;
+	border-width: 2px;
+	width: 90px;
+	padding: 5px;
+	font-size: 15px;
+}
+.track{
+	border-style: dashed;
+	border-width: 2px;
+	width: 570px;
+	padding: 5px;
+	font-family: fantasy;
+	font-size: 15px;
+}
+span{
+	color: orangered	
+}
+.money{
+	width: 350px;
+	margin: auto
+}
