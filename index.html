@@ -17,7 +17,7 @@
         </div>
         <div class="panel-body" ng-repeat="frog in vm.frogs">
             <div class="racer" style="display: inline-block">{{frog.name}}</div>
-            <div class="track" style="display: inline-block"><img src="frog.png" class="frog"><span style="float: left">Start ||</span><span style="float: right">|| Finish</span></div>
+            <div class="track" style="display: inline-block"><img src="frog.png" class="frog" style="left: {{frog.posX}}%"><span style="float: left">Start ||</span><span style="float: right">|| Finish</span></div>
         </div>
         <div class="panel-footer">
             <span class="btn btn-warning" ng-click="vm.race()">Start Race</span>

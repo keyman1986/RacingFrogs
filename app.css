@@ -20,7 +20,10 @@
 	font-size: 15px;
 }
 .frog{
-	
+	/*left: 350;*/
+	display: inline-block;
+	margin: -ms-align-self: baseline;
+	position: absolute;
 }
 span{
 	color: orangered	

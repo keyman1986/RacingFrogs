@@ -10,14 +10,15 @@ function MainController() {
     vm.bank = 200;
     
     vm.frogs = [
-        {name: "Tom", posX: 0},
-        {name: "Dick", posX: 0},
-        {name: "Harry", posX:0}
+        {name: "Tom", posX: 33},
+        {name: "Dick", posX: 33},
+        {name: "Harry", posX: 33}
         ];
     
     vm.race = function(){
         vm.frogs.forEach(function(){
-            vm.frogs.posX += 10;
+            vm.frogs.posX += 1;
+            console.log("Hi");
         });
     };
     
