@@ -20,9 +20,8 @@
 	font-size: 15px;
 }
 .frog{
-	/*left: 350;*/
 	display: inline-block;
-	margin: -ms-align-self: baseline;
+	margin: auto;
 	position: absolute;
 }
 span{
