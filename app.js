@@ -9,18 +9,37 @@ function MainController($timeout) {
     vm.bob = new Guy("Bob",150);
     vm.bank = 200;
     var _racing = false;
+    var _startingPosX = 36;
+    vm.newRacer = "";
     
-       
+    vm.addNewRacer = function(racerName){
+        vm.frogs.forEach(function(racerName){
+            if(racerName === name){
+                
+            }
+        })
+        new Racers(racerName);
+    };
     
-    vm.frogs = [
-        {name: "Tom", posX: 36},
-        {name: "Dick", posX: 36},
-        {name: "Harry", posX: 36}
-        ];
+    vm.frogs = [];
+    
+    
+    function Racers(name){
+        this.name = name;
+        this.posX = _startingPosX;
+        vm.frogs.push(this)
+    }
+    
+    vm.resetRacers = function(){
+        vm.frogs = [];
+    }
     
     vm.start = function(){
-        _racing = true;
-        _raceManager();
+        if(vm.frogs.length > 1){
+            _racing = true;
+            _raceManager();
+        }
+        
     }
    
     function _checkWinners(){

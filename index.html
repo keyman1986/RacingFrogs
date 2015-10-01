@@ -20,8 +20,12 @@
             <div class="track" style="display: inline-block"><img src="frog.png" class="frog" style="left: {{frog.posX}}%"><span style="float: left">Start ||</span><span style="float: right">|| Finish</span></div>
         </div>
         <div class="panel-footer">
+            <input type="text" ng-model="vm.newRacer"/>
+            <span class="btn btn-default" ng-click="vm.addNewRacer(vm.newRacer)">Add Racer</span>
+            <span class="btn btn-default" ng-click="vm.resetRacers()">Reset Racers</span>
+            <br><br>
             <span class="btn btn-warning" ng-click="vm.start()">Start Race</span>
-            <span class="btn btn-danger" ng-click="vm.reset()" style="padding: 2px">Reset them Frogs</span>
+            <span class="btn btn-danger" ng-click="vm.reset()" style="padding: 2px">Reset Race</span>
         </div>
     </div>
 </div>
