@@ -13,11 +13,11 @@
     <br>
     <div class="panel panel-warning">
         <div class="panel-heading">
-            <h3>Welcome to The Frog Races</h3>
+            <h3>Welcome to the Races</h3>
         </div>
         <div class="panel-body" ng-repeat="frog in vm.frogs">
             <div class="racer" style="display: inline-block">{{frog.name}}</div>
-            <div class="track" style="display: inline-block"><img src="frog.png" class="frog" style="left: {{frog.posX}}%"><span style="float: left">Start ||</span><span style="float: right">|| Finish</span></div>
+            <div class="track" style="display: inline-block"><img src="frog.png" class="frog" style="left: {{frog.posX}}px"><span style="float: left">Start ||</span><span style="float: right">|| Finish</span></div>
         </div>
         <div class="panel-footer">
             <input type="text" ng-model="vm.newRacer"/>

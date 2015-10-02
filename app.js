@@ -9,24 +9,29 @@ function MainController($timeout) {
     vm.bob = new Guy("Bob",150);
     vm.bank = 200;
     var _racing = false;
-    var _startingPosX = 36;
+    var _startingPosX = 345;
     vm.newRacer = "";
     
     vm.addNewRacer = function(racerName){
-        vm.frogs.forEach(function(racerName){
-            if(racerName === name){
-                
-            }
+        var taken = false;
+        vm.frogs.forEach(function(x){
+            if(x.name === racerName){
+                taken = true;
+                alert(racerName + " Has already been added!");
+            } 
         })
-        new Racers(racerName);
+        if (!taken) {
+            new Racers(racerName,img);
+        }
     };
     
     vm.frogs = [];
     
     
-    function Racers(name){
+    function Racers(name,img){
         this.name = name;
         this.posX = _startingPosX;
+        this.img = img;
         vm.frogs.push(this)
     }
     
@@ -44,7 +49,7 @@ function MainController($timeout) {
    
     function _checkWinners(){
         vm.frogs.forEach(function(frog){
-            if(frog.posX >= 69){
+            if(frog.posX >= 790){
                 alert("Race complete");
                 _racing = false;
             }
@@ -71,7 +76,7 @@ function MainController($timeout) {
     
     vm.reset = function(){
         vm.frogs.forEach(function(frog){
-            frog.posX = 36;
+            frog.posX = 345;
         })
     };
   
