@@ -20,8 +20,12 @@ function MainController($timeout) {
                 alert(racerName + " Has already been added!");
             } 
         })
+        if(vm.frogs.length >= 10){
+                alert("Sorry their is a maximum of 10 racers.");
+                return;
+            }
         if (!taken) {
-            new Racers(racerName,img);
+            new Racers(racerName);
         }
     };
     
@@ -31,10 +35,9 @@ function MainController($timeout) {
     function Racers(name,img){
         this.name = name;
         this.posX = _startingPosX;
-        this.img = img;
         vm.frogs.push(this)
     }
-    
+        
     vm.resetRacers = function(){
         vm.frogs = [];
     }
@@ -50,7 +53,7 @@ function MainController($timeout) {
     function _checkWinners(){
         vm.frogs.forEach(function(frog){
             if(frog.posX >= 790){
-                alert("Race complete");
+                alert("Race complete & " + frog.name + " Won!");
                 _racing = false;
             }
         })
